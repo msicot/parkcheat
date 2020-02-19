@@ -16,7 +16,7 @@ if (!jwtp) {
   console.error('FATAL ERROR: jwtPrivateKey is not defined');
   process.exit(1);
 }
-mongoose.connect('mongodb://localhost/parkcheat')
+mongoose.connect(config.mongo)
   .then(() => console.log('Connected to MongoDB...'))
   .catch(err => console.error('Could not connect to MongoDB...'));
  
